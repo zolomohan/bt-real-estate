@@ -1,0 +1,57 @@
+#header{
+    background: #10284e;
+    color: #fff;
+}
+
+#header a:hover{
+    color: #30caa0;
+}
+
+#branding h1{
+    color: #fff;
+}
+
+.brand_img{
+    height: 50px;
+    width: 80px;
+}
+
+div.breadcrumbs{
+    background-color: #30caa0;
+    color: #333;
+}
+
+div.breadcrumbs a{
+    color: #111;
+}
+
+div.breadcrumbs a:hover{
+    color: #10284e;
+    text-decoration: underline;
+}
+
+.module h2, .module caption, .inline-group h2{
+    background-color: #30caa0;
+}
+
+a:link,
+a:visited{
+    color: #10284e;
+}
+
+li a.addlink:hover{
+    background-color: #10284e;
+}
+
+.button.default, input[type=submit].default, .submit-row input.default{
+    background-color: #10284e;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button{
+    background-color: #30caa0;
+}
+
+input[type=submit]:hover{
+    background-color: #46a088;
+    transition: 0.2s ease-out all;
+}
