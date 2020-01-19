@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     # Custom Apps
     'pages.apps.PagesConfig',
     'listings.apps.ListingsConfig',
-    'realtors.apps.RealtorsConfig'
+    'realtors.apps.RealtorsConfig',
+    'accounts.apps.AccountsConfig'
 ]
 
 MIDDLEWARE = [
