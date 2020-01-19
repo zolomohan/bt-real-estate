@@ -12,12 +12,12 @@
             <div class="form-row">
               <div class="col-md-4 mb-3">
                 <label class="sr-only">Keywords</label>
-                <input type="text" name="keywords" class="form-control" placeholder="Keyword (Pool, Garage, etc)">
+                <input type="text" name="keywords" class="form-control" placeholder="Keyword (Pool, Garage, etc)" value={{ user_input.keywords }}>
               </div>
 
               <div class="col-md-4 mb-3">
                 <label class="sr-only">City</label>
-                <input type="text" name="city" class="form-control" placeholder="City">
+                <input type="text" name="city" class="form-control" placeholder="City" value={{ user_input.city }}>
               </div>
 
               <div class="col-md-4 mb-3">
@@ -25,7 +25,7 @@
                 <select name="state" class="form-control">
                   <option selected="true" disabled hidden>State (All)</option>
                   {% for value, text in state_options.items %}
-										<option value="{{ value }}">{{ text }}</option>
+                    <option value="{{ value }}" {% if value == user_input.state %} selected {% endif %}>{{ text }}</option>
 									{% endfor %}
                 </select>
               </div>
@@ -37,7 +37,7 @@
                 <select name="bedrooms" class="form-control">
                   <option selected="true" disabled hidden>Bedrooms (Any)</option>
                   {% for value, text in bedroom_options.items %}
-										<option value="{{ value }}">{{ text }}</option>
+										  <option value="{{ value }}" {% if value == user_input.bedrooms %} selected {% endif %}>{{ text }}</option>
 									{% endfor %}
                 </select>
               </div>
@@ -45,7 +45,7 @@
                 <select name="price" class="form-control">
                   <option selected="true" disabled hidden>Max Price (All)</option>
                   {% for value, text in price_options.items %}
-										<option value="{{ value }}">{{ text }}</option>
+										<option value="{{ value }}" {% if value == user_input.price %} selected {% endif %}>{{ text }}</option>
 									{% endfor %}
                 </select>
               </div>
