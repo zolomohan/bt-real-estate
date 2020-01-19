@@ -3,10 +3,15 @@ from django.shortcuts import render
 from listings.models import Listing
 from realtors.models import Realtor
 
+from listings.search_options import state_options, bedroom_options, price_options
+
 def index(request):
     recent_listings = Listing.objects.order_by('-list_date').filter(is_published=True)[:3]
     context = {
-        "recent_listings": recent_listings
+        "recent_listings": recent_listings,
+        "state_options": state_options,
+        "bedroom_options": bedroom_options,
+        "price_options": price_options
     }
     return render(request, 'pages/index.html', context)
 
